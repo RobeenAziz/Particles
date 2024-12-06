@@ -81,7 +81,6 @@ namespace Matrices
         }
         return out;
     }
-}
 
 ScalingMatrix::ScalingMatrix(double scale)
 Matrix(2, 2);
@@ -89,3 +88,6 @@ Matrix(2, 2);
     a[0][0] = scale;
     a[1][1] = scale;
 }
+}
+
+
