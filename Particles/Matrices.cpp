@@ -106,13 +106,13 @@ namespace Matrices
        {
            for (int j = 0; j < nCols; ++j)
            {
-               if (i = 0)
+               if (i == 0)
                {
-                   currval == xShift;
+                   currval = xShift;
                }
                else
                {
-                   currval == yShift;
+                   currval = yShift;
                }
                a[i][j] = currval;
            }
