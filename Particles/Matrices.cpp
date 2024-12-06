@@ -90,10 +90,10 @@ namespace Matrices
     }
 
     RotationMatrix::RotationMatrix(double theta) : Matrix(2,2){
-        (0,0) = cos(theta);
-        (0,1) = -sin(theta);
-        (1,0) = sin(theta);
-        (1,1) = cos(theta);
+        a[0][0] = cos(theta);
+        a[0][1] = -sin(theta);
+        a[1][0] = sin(theta);
+        a[1][1] = cos(theta);
     }
 }
 
