@@ -88,6 +88,13 @@ namespace Matrices
         a[0][0] = scale;
         a[1][1] = scale;
     }
+
+    RotationMatrix::RotationMatrix(double theta) : Matrix(2,2){
+        (0,0) = cos(theta);
+        (0,1) = -sin(theta);
+        (1,0) = sin(theta);
+        (1,1) = cos(theta);
+    }
 }
 
 
