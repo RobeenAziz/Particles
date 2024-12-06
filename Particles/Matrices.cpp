@@ -108,11 +108,11 @@ namespace Matrices
            {
                if (i = 0)
                {
-                   currval = xShift;
+                   currval == xShift;
                }
                else
                {
-                   currval = yShift;
+                   currval == yShift;
                }
                a[i][j] = currval;
            }
