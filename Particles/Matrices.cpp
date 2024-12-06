@@ -89,12 +89,37 @@ namespace Matrices
         a[1][1] = scale;
     }
 
+
     RotationMatrix::RotationMatrix(double theta) : Matrix(2,2){
         a[0][0] = cos(theta);
         a[0][1] = -sin(theta);
         a[1][0] = sin(theta);
         a[1][1] = cos(theta);
     }
+
+
+    TranslationMatrix::TranslationMatrix(double xShift, double yShift, int nCols)
+   : Matrix(2, nCols)
+   {
+       double currval;
+       for(int i = 0; i < 2; ++i)
+       {
+           for (int j = 0; j < nCols; ++j)
+           {
+               if (i = 0)
+               {
+                   currval = xShift;
+               }
+               else
+               {
+                   currval = yShift;
+               }
+               a[i][j] = currval;
+           }
+       }
+   }
 }
+
+
 
 
