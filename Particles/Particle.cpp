@@ -44,7 +44,7 @@ Particle::Particle(RenderTarget& target, int numPoints, Vector2i mouseClickPosit
 {
 	VertexArray lines(TriangleFan, m_numPoints + 1);
 	Vector2f center;
-	target.mapPixelToCoords(m_centerCoordinate, m_cartesianPlane);
+	center.mapPixelToCoords(m_centerCoordinate, m_cartesianPlane);
 	lines[0].position = center;
 	lines[0].color = m_color1;
 	for (int j = 1; j <= m_numPoints; ++j)
@@ -52,7 +52,7 @@ Particle::Particle(RenderTarget& target, int numPoints, Vector2i mouseClickPosit
 		lines[j].position = ; 
 		lines[j].color = m_color2;
 	}
-	target.draw(lines)
+	center.draw(lines)
 }
 
 void update(float dt)
