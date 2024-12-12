@@ -40,7 +40,7 @@ Particle::Particle(RenderTarget& target, int numPoints, Vector2i mouseClickPosit
     theta += dTheta;
   }
   
-  virtual void draw(RenderTarget& target, RenderStates states)
+  void Particle::draw(RenderTarget & target, RenderStates states)
 {
 	VertexArray lines(TriangleFan, m_numPoints + 1);
 	Vector2f center;
