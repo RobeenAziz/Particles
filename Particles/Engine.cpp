@@ -29,16 +29,14 @@ void Engine::update(float dtAsSeconds)
 {
 	for (vector<Particle>::iterator i = m_particles.begin(); i != m_particles.end();)
 	{
-		if (m_particles[i].getTTL() > 0)
+		if (i->getTTL() > 0)
 		{
-			m_particles[i].update(dtAsSeconds);
+			i->update(dtAsSeconds);
 			++i;
 		}
 		else
 		{
-			m_particles.erase(m_particles.begin() + i);
-			
-
+			i = m_particles.erase(i);
 		}
 	}
 
