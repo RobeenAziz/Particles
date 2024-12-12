@@ -44,6 +44,13 @@ Engine::input(){
     }
 
     if(event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::left){
+	    Vector2i mouseClickPosition = Mouse::getPosition(m_Window);
+
+	    for(int i = 0; i < 5; i++){
+		    int numPoints = rand() % 26 + 25;
+		    m_particles.push_back(Partical(m_window, numPoints, mouseClickPosition))
+	    }
+	    
 	    
   }
 }
