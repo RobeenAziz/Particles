@@ -35,7 +35,7 @@ void Engine::draw()
 	m_Window.display();
 }
 
-Engine::input(){
+void Engine::input(){
   Event event;
 
   while(window.pollEvent(event)){
