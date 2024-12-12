@@ -34,3 +34,16 @@ void Engine::draw()
 	}
 	m_Window.display();
 }
+
+Engine::input(){
+  Event event;
+
+  while(window.pollEvent(event)){
+    if(event.type == Event::Closed || (event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)){
+      m_Window.close();
+    }
+
+    if(event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::left){
+	    
+  }
+}
