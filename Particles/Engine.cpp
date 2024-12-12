@@ -48,9 +48,9 @@ void Engine::input(){
 
 	    for(int i = 0; i < 5; i++){
 		    int numPoints = rand() % 26 + 25;
-		    m_particles.push_back(Partical(m_window, numPoints, mouseClickPosition))
-	    }
-	    
-	    
+		    m_particles.push_back(Particle(m_Window, numPoints, mouseClickPosition));
+
+	    } 
+    }
   }
 }
