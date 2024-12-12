@@ -38,12 +38,12 @@ void Engine::draw()
 void Engine::input(){
   Event event;
 
-  while(window.pollEvent(event)){
+  while(m_Window.pollEvent(event)){
     if(event.type == Event::Closed || (event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)){
       m_Window.close();
     }
 
-    if(event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::left){
+    if(event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left){
 	    Vector2i mouseClickPosition = Mouse::getPosition(m_Window);
 
 	    for(int i = 0; i < 5; i++){
