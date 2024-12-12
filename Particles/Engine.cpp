@@ -24,3 +24,13 @@ void Engine::run()
 		draw();
 	}
 }
+
+void Engine::draw()
+{
+	m_Window.clear();
+	for (int i = 0; i < m_particles.size(); ++i)
+	{
+		m_Window.draw(m_particles[i]);
+	}
+	m_Window.display();
+}
