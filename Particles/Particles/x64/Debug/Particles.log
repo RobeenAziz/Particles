@@ -1,0 +1,5 @@
+﻿  Engine.cpp
+C:\Users\robee\Downloads\Particles\Particle.h(8,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'Engine.cpp')
+  
+  Particles.vcxproj -> C:\Users\robee\Downloads\Particles\x64\Debug\Particles.exe
