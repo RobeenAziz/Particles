@@ -40,7 +40,7 @@ Particle::Particle(RenderTarget& target, int numPoints, Vector2i mouseClickPosit
     theta += dTheta;
   }
   
-  void Particle::draw(RenderTarget & target, RenderStates states)
+  void Particle::draw(RenderTarget & target, RenderStates states) const
 {
 	VertexArray lines(TriangleFan, m_numPoints + 1);
 	Vector2f center;
@@ -52,7 +52,7 @@ Particle::Particle(RenderTarget& target, int numPoints, Vector2i mouseClickPosit
 		lines[j].position = target.mapCoordsToPixel(Vector2f(m_A(0, j - 1), m_A(1, j - 1), m_cartesianPlane)); 
 		lines[j].color = m_color2;
 	}
-	target.draw(lines)
+	target.draw(lines);
 }
 
 void update(float dt)
