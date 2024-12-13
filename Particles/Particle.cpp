@@ -95,3 +95,9 @@ scale(double c)
 }
   
 }
+
+
+bool Particle::almostEqual(double a, double b, double eps)
+{
+return fabs(a - b) < eps;
+}
