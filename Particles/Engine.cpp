@@ -14,14 +14,13 @@ void Engine::run()
 	cout << "Unit tests complete.  Starting engine..." << endl;
 	while (m_Window.isOpen())
 	{
-		clock.restart();
-		Time curtime;
-		float seconds;
-		curtime = clock.getElapsedTime();
-		seconds = curtime.asSeconds();
-		input();
-		update(seconds);
-		draw();
+	    Time curtime;
+            curtime = clock.restart();
+            float seconds;
+            seconds = curtime.asSeconds();
+            input();
+            update(seconds);
+            draw();
 	}
 }
 
