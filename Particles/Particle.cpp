@@ -39,6 +39,7 @@ Particle::Particle(RenderTarget& target, int numPoints, Vector2i mouseClickPosit
 
     theta += dTheta;
   }
+}
   
   void Particle::draw(RenderTarget & target, RenderStates states) const
 {
